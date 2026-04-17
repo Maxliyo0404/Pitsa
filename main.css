@@ -90,15 +90,13 @@ header{
     }
     form{
         max-width: 100%;
-        padding: 16px ;
+        padding:8px ;
         border-radius: 20px;
          box-shadow: 10px 10px 10px rgb(23, 24, 24);
         display: flex;
         align-items: center;
         justify-content: space-between;
-         background: #edeff0;
-         margin: 0 auto;
-         margin-bottom: 20px;
+         background: #f3f4f5;
           &:hover{
             transform: scale(1.1);
         }
@@ -107,7 +105,7 @@ header{
 .label{
        width: 700px;
        border: 1px solid #5b5858;
-       padding: 6px;
+       padding: 8px;
        border-radius: 20px;
        display: flex;
         align-items: center;
@@ -120,6 +118,12 @@ header{
         outline: none;
         background: none;
          color:black;
-         font-family: "Roboto", sans-serif;
   
+    }
+    .button{
+        padding: 13px 32px;
+        background: #FF7010;
+        border-radius: 10px;
+        border: none;
+        color: #edeff0;
     }
