@@ -212,3 +212,10 @@ header{
         line-height: 22px;
         
     }
+    .price-tag{
+        color: #FF7010;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
