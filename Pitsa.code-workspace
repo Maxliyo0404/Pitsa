@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../web sited"
+		},
+		{
+			"path": "../Api ferch filter"
+		},
+		{
+			"path": "../Css 9-dars"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Pitsa",
+		"liveServer.settings.port": 5502
+	}
+}
