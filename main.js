@@ -1,4 +1,4 @@
-// 1. MA'LUMOTLAR (DATA) - Buni hech qanday funksiyaga o'ramang
+
 let napitDatas = [
     { id: 1, img: "./image/Fire.svg", name: "Акции" },
     { id: 2, img: "./image/Pizza.svg", name: "Пицца" },
@@ -18,7 +18,7 @@ let pizza_data = [
     { id: 5, img: "./image/Pizza.svg", name: "Margarita", description: "Классическая маргарита...", price: 450, count: 1, badge: "NEW" },
 ];
 
-// 2. TEPADAGI MENYU UCHUN RENDER (napitData)
+
 function renderCategories(data, containerId) {
     let container = document.getElementById(containerId);
     if (!container) return;
@@ -31,7 +31,7 @@ function renderCategories(data, containerId) {
     `).join("");
 }
 
-// 3. PITSA KARTALARI UCHUN RENDER (pissaData)
+
 function renderPizzas(data, containerId) {
     let container = document.getElementById(containerId);
     if (!container) return;
@@ -56,7 +56,7 @@ function renderPizzas(data, containerId) {
     `).join("");
 }
 
-// 4. HISOBLAGICH FUNKSIYASI (INCREMENT/DECREMENT)
+
 window.changeCount = function(id, action) {
     pizza_data = pizza_data.map(item => {
         if (item.id === id) {
@@ -65,17 +65,17 @@ window.changeCount = function(id, action) {
         }
         return item;
     });
-    // Faqat pitsalarni qayta chizamiz, menyuga tegmaymiz
+   
     renderPizzas(pizza_data, "pissaData");
 };
 
-// 5. SAHIFA YUKLANIShI VA FILTRLAR
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Dastlabki renderlar
+   
     renderCategories(napitDatas, "napitData");
     renderPizzas(pizza_data, "pissaData");
 
-    // Qidiruv tizimi
+
     let searchInput = document.getElementById("inputData");
     if (searchInput) {
         searchInput.addEventListener("input", (e) => {
