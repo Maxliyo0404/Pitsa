@@ -137,5 +137,12 @@ header{
     }
     .pizza-card{
         max-width: 100%;
-        border: 1px solid grey;
+        padding: 24px;
+        border-radius:8px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        border: 1px solid #F0F0F0;
     }
