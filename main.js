@@ -9,14 +9,15 @@ let napitDatas =[
     { id:7,  img:"./image/Fire.svg ",  name:"Десерты"},
     { id:8,  img:"./image/Fire.svg ",  name:"Соусы"},
 ]
-let natija =["napitData"];
-function render(dataArray) {
-  let cards = dataArray.map(el => `
+
+function render(napitData) {
+  let cards = napitData.map(el => `
     <div class="card">
-        <img class="img"  src="${el.id}" alt="${el.name}">
+        <img class="img"  src="${el.img}" alt="${el.name}">
         <p class="text">${el.name}</p>
-        <a class="data" href="#">${new Date(el.createdAt).toLocaleDateString()}</a>
+
     </div>
   `).join(""); 
   napitData.innerHTML = cards;
 }
+render(napitData);
