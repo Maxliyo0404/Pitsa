@@ -44,3 +44,32 @@ header{
              cursor: pointer;
                } 
     }
+    .sectionOne{
+        margin-top: 150px;
+        text-align: center;
+    }
+    .napitData{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .cards{
+       width: 100px;
+       height: 90px;
+            color: #000000; 
+            border: 1px solid #494949;
+            flex-direction: column;
+            padding-top: 15px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            gap: 5px;
+            &:hover{
+                transform: scale(1.1);
+            }
+    }
+    .img{
+        width: 30px;
+        height: 30px;
+    }
