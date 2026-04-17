@@ -148,6 +148,9 @@ header{
         gap: 10px;
         padding: 9px 16px;
         background: #FFFFFF;
+         font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
          &:hover{
             transform: scaleX(1.1);
         }
