@@ -27,12 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
 let pitssa = document.getElementById("pissaData");
 
 let pizza_data = [
-    { id: 1, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 2, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
-    { id: 3, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 4, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
-    { id: 5, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 6, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }
+    { id: 1, img: "./image/Pizza.svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 2, img: "/image/Rectangle 4.svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
+    { id: 3, img: "/image/Rectangle 4 (1).svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 7, img: "./image/Pizza.svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+     { id: 2, img: "/image/Rectangle 4.svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
 ];
 
 function renderPitsa(dataArray, targetElement) {
