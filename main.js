@@ -1,4 +1,4 @@
-let napitDataElement = document.getElementById("napitData"); // Element nomi o'zgartirildi
+// 1. MA'LUMOTLAR (DATA) - Buni hech qanday funksiyaga o'ramang
 let napitDatas = [
     { id: 1, img: "./image/Fire.svg", name: "Акции" },
     { id: 2, img: "./image/Pizza.svg", name: "Пицца" },
@@ -10,50 +10,53 @@ let napitDatas = [
     { id: 8, img: "./image/Fire.svg", name: "Соусы" },
 ];
 
-function render(data, container) {
-  let cards = data.map(el => `
-    <div class="cards">
-    <div class="card">
-        <img class="img" src="${el.img}" alt="${el.name}">
-        <p class="text">${el.name}</p>
-    </div>
-    </div>
-  `).join(""); 
-  
-  container.innerHTML = cards; 
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-let pitssa = document.getElementById("pissaData");
-
 let pizza_data = [
-    { id: 1, img: "./image/Pizza.svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 2, img: "/image/Rectangle 4.svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
-    { id: 3, img: "/image/Rectangle 4 (1).svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
-    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
-    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 7, img: "./image/Pizza.svg", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
-     { id: 2, img: "/image/Rectangle 4.svg", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
+    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
+    { id: 2, img: "./image/Pizza.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 3, img: "./image/Pizza.svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+    { id: 4, img: "./image/Pizza.svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 5, img: "./image/Pizza.svg", name: "Margarita", description: "Классическая маргарита...", price: 450, count: 1, badge: "NEW" },
 ];
 
-function renderPitsa(dataArray, targetElement) {
-    if (!targetElement) return; 
+// 2. TEPADAGI MENYU UCHUN RENDER (napitData)
+function renderCategories(data, containerId) {
+    let container = document.getElementById(containerId);
+    if (!container) return;
 
-    targetElement.innerHTML = dataArray.map(el => `
-        <div class="box">
-            <img class="img" src="${el.img}" alt="${el.name}">
-            <h2 class="text">${el.name}</h2>
-            <p class="text">${el.description}</p>
-            <div class="footer">
-                <span>${el.price} ₽</span>
-                <a class="xit" href="#">${el.badge}</a>
-            </div>
+    container.innerHTML = data.map(el => `
+        <div class="category-card">
+            <img src="${el.img}" alt="${el.name}">
+            <p>${el.name}</p>
         </div>
     `).join("");
 }
-renderPitsa(pizza_data, pitssa);
-});
+
+// 3. PITSA KARTALARI UCHUN RENDER (pissaData)
+function renderPizzas(data, containerId) {
+    let container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = data.map(el => `
+        <div class="pizza-card">
+            ${el.badge ? `<div class="badge">${el.badge}</div>` : ''}
+            <img class="pizza-img" src="${el.img}" alt="${el.name}">
+            <h3 class="pizza-title">${el.name}</h3>
+            <p class="pizza-desc">${el.description}</p>
+            
+            <div class="pizza-footer">
+                <div class="counter-container">
+                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus')">−</button>
+                    <span class="count-num">${el.count}</span>
+                    <button class="btn-count" onclick="changeCount(${el.id}, 'plus')">+</button>
+                </div>
+                <div class="price-tag">от ${el.price * el.count} ₽</div>
+            </div>
+            <button class="select-btn">Выбрать</button>
+        </div>
+    `).join("");
+}
+
+// 4. HISOBLAGICH FUNKSIYASI (INCREMENT/DECREMENT)
 window.changeCount = function(id, action) {
     pizza_data = pizza_data.map(item => {
         if (item.id === id) {
@@ -62,43 +65,23 @@ window.changeCount = function(id, action) {
         }
         return item;
     });
-    renderData(pizza_data, "pissaData");
+    // Faqat pitsalarni qayta chizamiz, menyuga tegmaymiz
+    renderPizzas(pizza_data, "pissaData");
 };
 
-function renderData(data, containerId) {
-    let container = document.getElementById(containerId);
-    if (!container) return;
-
-    container.innerHTML = data.map(el => `
-        <div class="box">
-            <img class="img" src="${el.img}" alt="${el.name}">
-            <h2 class="text">${el.name}</h2>
-            <p class="text">${el.description || ''}</p>
-            
-            ${el.price ? `
-                <div class="counter">
-                    <button onclick="changeCount(${el.id}, 'minus')">−</button>
-                    <span>${el.count}</span>
-                    <button onclick="changeCount(${el.id}, 'plus')">+</button>
-                </div>
-                <div class="footer">
-                    <span class="price">${el.price * el.count} ₽</span>
-                    <a class="xit" href="#">${el.badge}</a>
-                </div>
-            ` : `<p class="text">${el.name}</p>`}
-        </div>
-    `).join("");
-}
+// 5. SAHIFA YUKLANIShI VA FILTRLAR
 document.addEventListener("DOMContentLoaded", () => {
-    renderData(napitDatas, "napitData");
-    renderData(pizza_data, "pissaData");
+    // Dastlabki renderlar
+    renderCategories(napitDatas, "napitData");
+    renderPizzas(pizza_data, "pissaData");
 
+    // Qidiruv tizimi
     let searchInput = document.getElementById("inputData");
     if (searchInput) {
         searchInput.addEventListener("input", (e) => {
             let val = e.target.value.toLowerCase();
             let filtered = pizza_data.filter(p => p.name.toLowerCase().includes(val));
-            renderData(filtered, "pissaData");
+            renderPizzas(filtered, "pissaData");
         });
     }
 });
