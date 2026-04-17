@@ -87,8 +87,6 @@ function renderData(data, containerId) {
         </div>
     `).join("");
 }
-
-// 4. Sahifa yuklanganda va Qidiruv
 document.addEventListener("DOMContentLoaded", () => {
     renderData(napitDatas, "napitData");
     renderData(pizza_data, "pissaData");
