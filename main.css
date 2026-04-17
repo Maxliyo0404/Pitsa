@@ -127,3 +127,11 @@ header{
         border: none;
         color: #edeff0;
     }
+    .pissaBox{
+        margin-top: 100px;
+    }
+    .pissa{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
