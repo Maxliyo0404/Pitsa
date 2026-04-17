@@ -54,8 +54,9 @@ function renderPizzas(data, containerId) {
                 </div>
                 <div class="price-tags">
                 <div class="price-tag">от ${el.price * el.count} ₽</div>
-            </div>
+           
             <button class="select-btn">Выбрать</button>
+        </div>
         </div>
         </div>
     `).join("");
