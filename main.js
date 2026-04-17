@@ -25,3 +25,16 @@ function render(data, container) {
 
 
 render(napitDatas, napitDataElement);
+
+let input = document.getElementById("inputData");
+search.addEventListener("inputData", (e) => {
+    let inputValue = e.target.value.toLowerCase(); 
+    
+
+    let filteredData = allData.filter(item => {  
+        return item.name.toLowerCase().includes(inputValue);
+    });
+
+    render(filteredData); 
+});
+
