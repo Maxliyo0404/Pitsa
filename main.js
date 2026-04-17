@@ -12,9 +12,12 @@ let napitDatas = [
 
 let pizza_data = [
     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
-    { id: 2, img: "./image/Pizza.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 3, img: "./image/Pizza.svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
-    { id: 4, img: "./image/Pizza.svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
     { id: 5, img: "./image/Pizza.svg", name: "Margarita", description: "Классическая маргарита...", price: 450, count: 1, badge: "NEW" },
 ];
 
