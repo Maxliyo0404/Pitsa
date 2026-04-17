@@ -23,30 +23,16 @@ function render(data, container) {
   container.innerHTML = cards; 
 }
 
-
-render(napitDatas, napitDataElement);
-
-let input = document.getElementById("inputData");
-search.addEventListener("inputData", (e) => {
-    let inputValue = e.target.value.toLowerCase(); 
-    
-
-    let filteredData = allData.filter(item => {  
-        return item.name.toLowerCase().includes(inputValue);
-    });
-
-    render(filteredData); 
-});
-
+document.addEventListener("DOMContentLoaded", () => {
 let pitssa = document.getElementById("pissaData");
 
 let pizza_data = [
-    { id: 1, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 0, badge: "ХИТ" },
-    { id: 2, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count: 0, badge: "NEW" }, // <-- VERGUL SHART
-    { id: 3, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 0, badge: "ХИТ" },
-    { id: 4, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count: 0, badge: "NEW" }, // <-- VERGUL SHART
-    { id: 5, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 0, badge: "ХИТ" },
-    { id: 6, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count: 0, badge: "NEW" }
+    { id: 1, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 2, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
+    { id: 3, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 4, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }, 
+    { id: 5, img: "./img/Rectangle 4.png", name: "EASY PEASY", description: "Курица, Лук...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 6, img: "./img/Rectangle 4 (1).png", name: "Margarita", description: "Klassik...", price: 450, count:  1, badge: "NEW" }
 ];
 
 function renderPitsa(dataArray, targetElement) {
@@ -64,6 +50,55 @@ function renderPitsa(dataArray, targetElement) {
         </div>
     `).join("");
 }
-
-// TO'G'RI CHAQIRISH:
 renderPitsa(pizza_data, pitssa);
+});
+window.changeCount = function(id, action) {
+    pizza_data = pizza_data.map(item => {
+        if (item.id === id) {
+            if (action === 'plus') return { ...item, count: item.count + 1 };
+            if (action === 'minus' && item.count > 1) return { ...item, count: item.count - 1 };
+        }
+        return item;
+    });
+    renderData(pizza_data, "pissaData");
+};
+
+function renderData(data, containerId) {
+    let container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = data.map(el => `
+        <div class="box">
+            <img class="img" src="${el.img}" alt="${el.name}">
+            <h2 class="text">${el.name}</h2>
+            <p class="text">${el.description || ''}</p>
+            
+            ${el.price ? `
+                <div class="counter">
+                    <button onclick="changeCount(${el.id}, 'minus')">−</button>
+                    <span>${el.count}</span>
+                    <button onclick="changeCount(${el.id}, 'plus')">+</button>
+                </div>
+                <div class="footer">
+                    <span class="price">${el.price * el.count} ₽</span>
+                    <a class="xit" href="#">${el.badge}</a>
+                </div>
+            ` : `<p class="text">${el.name}</p>`}
+        </div>
+    `).join("");
+}
+
+// 4. Sahifa yuklanganda va Qidiruv
+document.addEventListener("DOMContentLoaded", () => {
+    renderData(napitDatas, "napitData");
+    renderData(pizza_data, "pissaData");
+
+    let searchInput = document.getElementById("inputData");
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            let val = e.target.value.toLowerCase();
+            let filtered = pizza_data.filter(p => p.name.toLowerCase().includes(val));
+            renderData(filtered, "pissaData");
+        });
+    }
+});
