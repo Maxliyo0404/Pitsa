@@ -17,17 +17,17 @@ let pizzassa_1 = document.getElementById("pissaDatassa_1")
 let pizzassa_2 = document.getElementById("pissaDatassa_2")
 let pizzassa_3 = document.getElementById("pissaDatassa_3")
 let pizza_data = [
-    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
-    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
-    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
-    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
-    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
-     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
-     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
+    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW",  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;" },
+    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ",  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;" },
+    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "",  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" ,  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;"},
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "",  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;" },
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" ,  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;"},
+     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "",  style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;" },
+     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "", style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;"},
 ];
 let pizza_datas = [
-    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
+    {id: 1, img: "./image/sushi11.png", name: "Чикен Сладкий Чили", description: "Курица...", price: 399, count: 1, badge: "NEW", style: "width: 100%; height: 300px; object-fit: cover;"},
     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
     { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
     { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
@@ -108,12 +108,13 @@ function renderPizzas(data, containerId) {
     container.innerHTML = data.map(el => `
         <div class="pizza-card">
             ${el.badge ? `<div class="badge">${el.badge}</div>` : ''}
-            <img class="pizza-img" src="${el.img}" alt="${el.name}">
+            <img class="pizza-img" src="${el.img.trim()}" alt="${el.name}" style="${el.style || ''}">
+             <div class="pizza-cards">
             <h3 class="pizza-title">${el.name}</h3>
             <p class="pizza-desc">${el.description}</p>
             
             <div class="pizza-footer">
-                <div class="counter-container">
+                <div class="counter-container"> 
                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus', '${containerId}')">−</button>
                     <span class="count-num">${el.count}</span>
                     <button class="btn-count" onclick="changeCount(${el.id}, 'plus', '${containerId}')">+</button>
@@ -123,8 +124,10 @@ function renderPizzas(data, containerId) {
                 <div class="price-tag">от ${el.price * el.count} ₽</div>
         </div>
         </div>
+        </div>
     `).join("");
 }
+
 
 window.changeCount = function(id, action, containerId) {
     if (containerId === "pissaData") {
