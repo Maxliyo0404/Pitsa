@@ -70,9 +70,9 @@ function renderPizzas(data, containerId) {
             
             <div class="pizza-footer">
                 <div class="counter-container">
-                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus')">−</button>
-                    <span class="count-num">${el.count}</span>
-                    <button class="btn-count" onclick="changeCount(${el.id}, 'plus')">+</button>
+                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus', '${containerId}')">−</button>
+                     <span class="count-num">${el.count}</span>
+                    <button class="btn-count" onclick="changeCount(${el.id}, 'plus', '${containerId}')">+</button
                 </div>
               
                 <div class="price-tag">от ${el.price * el.count} ₽</div>
@@ -81,7 +81,7 @@ function renderPizzas(data, containerId) {
     `).join("");
 }
 
-window.changeCount = function(id, action) {
+window.changeCount = function(id, action, containerId) {
     pizza_data = pizza_data.map(item => {
         if (item.id === id) {
             if (action === 'plus') return { ...item, count: item.count + 1 };
