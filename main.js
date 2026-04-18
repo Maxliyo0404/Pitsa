@@ -27,7 +27,7 @@ let pizza_data = [
      { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "", style: "width: 100%; height: 200px; object-fit: contain;  padding-top: 15px;"},
 ];
 let pizza_datas = [
-    {id: 1, img: "./image/sushi11.png", name: "Чикен Сладкий Чили", description: "Курица...", price: 399, count: 1, badge: "NEW", style: "width: 100%; height: 300px; object-fit: cover;"},
+    {id: 1, img: "./image/sushi11.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 475 , count: 1, badge: "NEW", style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;"},
     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
     { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
     { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },

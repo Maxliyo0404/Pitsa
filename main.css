@@ -164,10 +164,13 @@ header{
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         align-items: stretch;
+        position: relative;
     }
     .badge{
         width: 65px;
         padding: 6px 8px;
+        position: absolute;
+        z-index: 2;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
         transform: translate(0, 20px);
@@ -186,12 +189,12 @@ header{
         position: relative;
         border: 1px solid #F0F0F0;
         box-shadow: 3px 5px 5px 3px rgb(160, 161, 161);
+
     }
     .pizza-cards{
-      padding: 24px;
+      padding: 18px;
     }
     .pizza-img{
-       
         margin-bottom: 10px;
     }
     .pizza-title{
