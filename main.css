@@ -166,12 +166,14 @@ header{
         align-items: stretch;
     }
     .badge{
+        width: 60px;
+        padding: 6px 8px;
          color: #FF7010;
         font-weight: 600;
         font-size: 18px;
         line-height: 22px;
         background: #E23535;
-        padding: 7px ;
+       
     }
     .pizza-card{
         max-width: 100%;
