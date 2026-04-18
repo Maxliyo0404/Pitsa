@@ -9,9 +9,9 @@ let napitDatas = [
     { id: 7, img: "./image/Fire.svg", name: "Десерты" },
     { id: 8, img: "./image/Fire.svg", name: "Соусы" },
 ];
-let pizza = document.getElementById("pissaData")
-let pizza = document.getElementById("pissaDatas")
-let pizza = document.getElementById("pissaDatassa")
+let pizzas = document.getElementById("pissaData")
+let pizzasa = document.getElementById("pissaDatas")
+let pizzassa = document.getElementById("pissaDatassa")
 let pizza_data = [
     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
@@ -86,6 +86,8 @@ window.changeCount = function(id, action) {
         if (item.id === id) {
             if (action === 'plus') return { ...item, count: item.count + 1 };
             if (action === 'minus' && item.count > 1) return { ...item, count: item.count - 1 };
+            else if (containerId === "pissaDatas") targetData = pizza_datas;
+             else if (containerId === "pissaDatassa") targetData = pizza_datassa;
         }
         return item;
     });
@@ -100,6 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
    
     renderCategories(napitDatas, "napitData");
     renderPizzas(pizza_data, "pissaData");
+    renderPizzas(pizza_datas, "pissaDatas");
+    renderPizzas(pizza_datassa, "pissaDatassa");
+
 
 
     let searchInput = document.getElementById("inputData");
@@ -108,6 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let val = e.target.value.toLowerCase();
             let filtered = pizza_data.filter(p => p.name.toLowerCase().includes(val));
             renderPizzas(filtered, "pissaData");
+            renderPizzas(filtered, "pissaDatas");
+            renderPizzas(filtered, "pissaDatassa");
         });
     }
 });
