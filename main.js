@@ -70,7 +70,7 @@ function renderPizzas(data, containerId) {
             
             <div class="pizza-footer">
                 <div class="counter-container">
-                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus')">−</button>
+                    <button onclick="changeCount(${el.id}, 'plus', '${containerId}')">+</button>
                     <span class="count-num">${el.count}</span>
                     <button class="btn-count" onclick="changeCount(${el.id}, 'plus')">+</button>
 
@@ -83,33 +83,32 @@ function renderPizzas(data, containerId) {
 }
 
 window.changeCount = function(id, action, containerId) {
-    pizza_data = pizza_data.map(item => {
-        if (item.id === id) {
-            if (action === 'plus') return { ...item, count: item.count + 1 };
-            if (action === 'minus' && item.count > 1) return { ...item, count: item.count - 1 };
-        }
-        else if (containerId === "pissaDatas") {
+    if (containerId === "pissaData") {
+        pizza_data = pizza_data.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_data, "pissaData");
+    } 
+    else if (containerId === "pissaDatas") {
         pizza_datas = pizza_datas.map(item => updateItem(item, id, action));
         renderPizzas(pizza_datas, "pissaDatas");
     } 
     else if (containerId === "pissaDatassa") {
         pizza_datassa = pizza_datassa.map(item => updateItem(item, id, action));
         renderPizzas(pizza_datassa, "pissaDatassa");
-    
-        }
-        function updateItem(item, id, action) {
+    }
+};
+
+function updateItem(item, id, action) {
     if (item.id === id) {
         if (action === 'plus') return { ...item, count: item.count + 1 };
         if (action === 'minus' && item.count > 1) return { ...item, count: item.count - 1 };
     }
-        return item;
-    });
+    return item;
+}
+
    
     renderPizzas(pizza_data, "pissaData");
     renderPizzas(pizza_datas, "pissaDatas");
     renderPizzas(pizza_datassa, "pissaDatassa");
-};
-
 
 document.addEventListener("DOMContentLoaded", () => {
    
