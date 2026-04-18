@@ -221,17 +221,20 @@ header{
         border: 1px solid #FF7010;
         background: none;
         background:none;
-        color: #FF7010;
+        color: #191919;
          font-weight: 400;
         font-size: 16px;
         line-height: 22px;
         box-shadow: 04px 5px 5px #FF7010;
+        &:hover{
+            transform: scale(1.1);
+        }
     
     }
     .count-num{
          color: #191919;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 26px;
         line-height: 22px;
         
     }
@@ -246,4 +249,7 @@ header{
         border: 1px solid #FF7010;
         background: #FF7010;
         border-radius: 10px;
+         &:hover{
+            transform: scale(1.1);
+        }
     }
