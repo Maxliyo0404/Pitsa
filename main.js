@@ -87,9 +87,21 @@ window.changeCount = function(id, action, containerId) {
         if (item.id === id) {
             if (action === 'plus') return { ...item, count: item.count + 1 };
             if (action === 'minus' && item.count > 1) return { ...item, count: item.count - 1 };
-            else if (containerId === "pissaDatas") targetData = pizza_datas;
-             else if (containerId === "pissaDatassa") targetData = pizza_datassa;
         }
+        else if (containerId === "pissaDatas") {
+        pizza_datas = pizza_datas.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_datas, "pissaDatas");
+    } 
+    else if (containerId === "pissaDatassa") {
+        pizza_datassa = pizza_datassa.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_datassa, "pissaDatassa");
+    
+        }
+        function updateItem(item, id, action) {
+    if (item.id === id) {
+        if (action === 'plus') return { ...item, count: item.count + 1 };
+        if (action === 'minus' && item.count > 1) return { ...item, count: item.count - 1 };
+    }
         return item;
     });
    
