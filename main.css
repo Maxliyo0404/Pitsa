@@ -54,7 +54,7 @@ header{
         justify-content: center;
         gap: 20px;
     }
-    .cards{
+    .category-cards{
        width: 100px;
        height: 90px;
             color: #000000; 

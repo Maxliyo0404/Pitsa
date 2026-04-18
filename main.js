@@ -4,10 +4,10 @@ let napitDatas = [
     { id: 2, img: "./image/Pizza.svg", name: "Пицца" },
     { id: 3, img: "./image/Group 101.svg", name: "Суши" },
     { id: 4, img: "./image/Drink.svg", name: "Напитки" },
-    { id: 5, img: "./image/Fire.svg", name: "Закуски" },
-    { id: 6, img: "./image/Fire.svg", name: "Комбо" },
-    { id: 7, img: "./image/Fire.svg", name: "Десерты" },
-    { id: 8, img: "./image/Fire.svg", name: "Соусы" },
+    { id: 5, img: "../image/Snacks.svg", name: "Закуски" },
+    { id: 6, img: "./image/Group 100.svg", name: "Комбо" },
+    { id: 7, img: "./image/Group 104.svg", name: "Десерты" },
+    { id: 8, img: "./image/Group 105.svg", name: "Соусы" },
 ];
 let pizzas = document.getElementById("pissaData")
 let pizzasa = document.getElementById("pissaDatas")
@@ -100,7 +100,7 @@ function renderCategories(data, containerId) {
     if (!container) return;
 
     container.innerHTML = data.map(el => `
-        <div class="category-card">
+        <div class="category-cards">
             <img src="${el.img}" alt="${el.name}">
             <p>${el.name}</p>
         </div>
