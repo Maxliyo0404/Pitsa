@@ -112,6 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.addEventListener("input", (e) => {
             let val = e.target.value.toLowerCase();
             let filtered = pizza_data.filter(p => p.name.toLowerCase().includes(val));
+            let filtered2 = pizza_datas.filter(p => p.name.toLowerCase().includes(val));
+            let filtered3 = pizza_datassa.filter(p => p.name.toLowerCase().includes(val));
             renderPizzas(filtered, "pissaData");
             renderPizzas(filtered, "pissaDatas");
             renderPizzas(filtered, "pissaDatassa");
