@@ -70,9 +70,10 @@ function renderPizzas(data, containerId) {
             
             <div class="pizza-footer">
                 <div class="counter-container">
-                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus', '${containerId}')">−</button>
-                     <span class="count-num">${el.count}</span>
-                    <button class="btn-count" onclick="changeCount(${el.id}, 'plus', '${containerId}')">+</button
+                    <button class="btn-count" onclick="changeCount(${el.id}, 'minus')">−</button>
+                    <span class="count-num">${el.count}</span>
+                    <button class="btn-count" onclick="changeCount(${el.id}, 'plus')">+</button>
+
                 </div>
               
                 <div class="price-tag">от ${el.price * el.count} ₽</div>
