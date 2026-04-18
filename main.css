@@ -166,13 +166,15 @@ header{
         align-items: stretch;
     }
     .badge{
-        width: 60px;
+        width: 65px;
         padding: 6px 8px;
-        border-radius: 6px;
-         color: #FF7010;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 22px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        transform: translate(-25px);
+         color:#FFFFFF;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
         background: #E23535;
        
     }
