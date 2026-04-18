@@ -52,11 +52,8 @@ function renderPizzas(data, containerId) {
                     <span class="count-num">${el.count}</span>
                     <button class="btn-count" onclick="changeCount(${el.id}, 'plus')">+</button>
                 </div>
-                <div class="price-tags">
+              
                 <div class="price-tag">от ${el.price * el.count} ₽</div>
-           
-            <button class="select-btn">Выбрать</button>
-        </div>
         </div>
         </div>
     `).join("");

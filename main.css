@@ -171,15 +171,16 @@ header{
         font-size: 18px;
         line-height: 22px;
         background: #E23535;
-;
         padding: 7px ;
     }
     .pizza-card{
         max-width: 100%;
+        height: auto;
         padding: 24px;
         border-radius:8px ;
         position: relative;
         border: 1px solid #F0F0F0;
+        box-shadow: 0 5px 5px rgb(160, 161, 161);
     }
     .pizza-img{
         width: 200px;
@@ -205,15 +206,27 @@ header{
         align-items: center;
         gap: 15px;
     }
+    .pizza-footer{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
     .btn-count{
-        padding: 5px;
+        padding: 4px 8px;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         border: none;
-        border: 1px solid gray;
-        margin-bottom: 8px;
+        border: 1px solid #FF7010;
+        background: none;
+        background:none;
+        color: #FF7010;
+         font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        box-shadow: 04px 5px 5px #FF7010;
+    
     }
     .count-num{
          color: #191919;
@@ -222,22 +235,15 @@ header{
         line-height: 22px;
         
     }
-    .price-tags{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    
     .price-tag{
-        color: #FF7010;
+        color:white;
         font-weight: 600;
         font-size: 18px;
         line-height: 22px;
-        margin-bottom: 16px;
-    }
-    .select-btn{
-        padding: 13px 32px;
+        margin-top: 16px;
+         padding: 13px;
+        border: 1px solid #FF7010;
         background: #FF7010;
         border-radius: 10px;
-        border: none;
-        color: #edeff0;
     }
