@@ -12,6 +12,10 @@ let napitDatas = [
 let pizzas = document.getElementById("pissaData")
 let pizzasa = document.getElementById("pissaDatas")
 let pizzassa = document.getElementById("pissaDatassa")
+let pizzassam = document.getElementById("pissaDatassam")
+let pizzassa_1 = document.getElementById("pissaDatassa_1")
+let pizzassa_2 = document.getElementById("pissaDatassa_2")
+let pizzassa_3 = document.getElementById("pissaDatassa_3")
 let pizza_data = [
     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
@@ -52,8 +56,38 @@ let pizza_datassam = [
      { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
      { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
 ];
+let pizza_datassam_1 = [
+    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
+    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
+     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
+];
+let pizza_datassam_2 = [
+    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
+    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
+     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
+];
+let pizza_datassam_3 = [
+    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
+    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
+     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
+];
 
-let result = [...pizza_data, ...pizza_datas, ...pizza_datassa, ...pizza_datassam];
+let result = [...pizza_data, ...pizza_datas, ...pizza_datassa, ...pizza_datassam, ...pizza_datassam_1, ...pizza_datassam_2, ...pizza_datassam_3];
 function renderCategories(data, containerId) {
     let container = document.getElementById(containerId);
     if (!container) return;
@@ -105,9 +139,21 @@ window.changeCount = function(id, action, containerId) {
         pizza_datassa = pizza_datassa.map(item => updateItem(item, id, action));
         renderPizzas(pizza_datassa, "pissaDatassa");
     }
-    else if (containerId === "pissaDatassa") {
-        pizza_datassa = pizza_datassa.map(item => updateItem(item, id, action));
+    else if (containerId === "pissaDatassam") {
+        pizza_datassam = pizza_datassam.map(item => updateItem(item, id, action));
         renderPizzas(pizza_datassam, "pissaDatassam");
+    }
+    else if (containerId === "pissaDatassam_1") {
+        pizza_datassam_1 = pizza_datassam_1.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_datassam_1, "pissaDatassam_1"); 
+    } 
+    else if (containerId === "pissaDatassam_2") {
+        pizza_datassam_2 = pizza_datassam_2.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_datassam_2, "pissaDatassam_2"); 
+    }
+    else if (containerId === "pissaDatassam_3") {
+        pizza_datassam_3 = pizza_datassam_3.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_datassam_3, "pissaDatassam_3"); 
     }
 };
 
@@ -124,6 +170,9 @@ function updateItem(item, id, action) {
     renderPizzas(pizza_datas, "pissaDatas");
     renderPizzas(pizza_datassa, "pissaDatassa");
     renderPizzas(pizza_datassam, "pissaDatassam");
+    renderPizzas(pizza_datassam_1, "pissaDatassam_1");
+    renderPizzas(pizza_datassam_2, "pissaDatassam_2");
+    renderPizzas(pizza_datassam_3, "pissaDatassam_3");
 
 document.addEventListener("DOMContentLoaded", () => {
    
@@ -132,6 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPizzas(pizza_datas, "pissaDatas");
     renderPizzas(pizza_datassa, "pissaDatassa");
     renderPizzas(pizza_datassam, "pissaDatassam");
+    renderPizzas(pizza_datassam_1, "pissaDatassam_1");
+    renderPizzas(pizza_datassam_2, "pissaDatassam_2");
+    renderPizzas(pizza_datassam_3, "pissaDatassam_3");
 
 
 
@@ -142,10 +194,17 @@ document.addEventListener("DOMContentLoaded", () => {
             let filtered = pizza_data.filter(p => p.name.toLowerCase().includes(val));
             let filtered2 = pizza_datas.filter(p => p.name.toLowerCase().includes(val));
             let filtered3 = pizza_datassa.filter(p => p.name.toLowerCase().includes(val));
+            let filtered4 = pizza_datassam.filter(p => p.name.toLowerCase().includes(val));
+            let filtered5 = pizza_datassam_1.filter(p => p.name.toLowerCase().includes(val));
+            let filtered6 = pizza_datassam_2.filter(p => p.name.toLowerCase().includes(val));
+            let filtered7 = pizza_datassam_3.filter(p => p.name.toLowerCase().includes(val));
             renderPizzas(filtered, "pissaData");
             renderPizzas(filtered, "pissaDatas");
             renderPizzas(filtered, "pissaDatassa");
             renderPizzas(filtered, "pissaDatassam");
+            renderPizzas(filtered, "pissaDatassam_1");
+            renderPizzas(filtered, "pissaDatassam_2");
+            renderPizzas(filtered, "pissaDatassam_3");
         });
     }
 });
