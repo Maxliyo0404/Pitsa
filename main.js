@@ -50,14 +50,15 @@ let pizza_datassa = [
    
 ];
 let pizza_datassam = [
-    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
-    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
-    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
-    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
-    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
-    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
-     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
-     { id: 2, img: "./image/Pizza.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
+    { id: 1, img: "./image/desert1.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 475, count: 1, badge: "NEW",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 2, img: "./image/desert2.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 395, count: 1, badge: "NEW",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 3, img: "./image/desert3.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 425, count: 1, badge: "",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 4, img: "./image/desert4.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 525, count: 1, badge: "",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 5, img: "./image/desert4.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 525, count: 1, badge: "",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 6, img: "./image/desert5.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 395, count: 1, badge: "",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 7, img: "./image/desert6.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 455, count: 1, badge: "",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+    { id: 8, img: "./image/desert3.png", name: "Филадельфия кранч", description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...", price: 425, count: 1, badge: "",  style: " display: block; padding: 0; width: 100%; height: aspect-ratio: 1; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" },
+   
 ];
 let pizza_datassam_1 = [
     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
