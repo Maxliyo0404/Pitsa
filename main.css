@@ -263,3 +263,17 @@ header{
             transform: scale(1.1);
         }
     }
+    .sectionFour{
+        padding: 50px 0;
+    }
+    .sectionFour-wrapper{
+        max-width: 850px;
+        margin: 0 auto;
+    }
+    .four-title{
+        color: #191919;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        margin-top: 16px;
+    }
