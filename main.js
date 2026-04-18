@@ -91,8 +91,8 @@ window.changeCount = function(id, action) {
     });
    
     renderPizzas(pizza_data, "pissaData");
-    renderPizzas(pizza_datas, "pissaData");
-    renderPizzas(pizza_datassa, "pissaData");
+    renderPizzas(pizza_datas, "pissaDatas");
+    renderPizzas(pizza_datassa, "pissaDatassa");
 };
 
 
