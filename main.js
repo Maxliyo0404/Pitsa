@@ -42,8 +42,18 @@ let pizza_datassa = [
      { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
      { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
 ];
+let pizza_datassam = [
+    { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "NEW" },
+    { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "ХИТ" },
+    { id: 3, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+    { id: 4, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 5, img: "./image/Rectangle 4 (2).svg", name: "4 сезона", description: "Бекон, Ветчина, Грибы...", price: 630, count: 1, badge: "" },
+    { id: 6, img: "./image/Rectangle 4 (1).svg", name: "EASY PEASY чикен а-ля", description: "Курица, Лук, Соус...", price: 249, count: 1, badge: "" },
+     { id: 1, img: "./image/Pizza.svg", name: "Чикен Сладкий Чили", description: "Курица, Лук, Перец Халапеньо...", price: 399, count: 1, badge: "" },
+     { id: 2, img: "./image/Rectangle 4.svg", name: "EASY PEASY огуречный", description: "Курица, Лук, Соус...", price: 549, count: 1, badge: "" },
+];
 
-let result = [...pizza_data, ...pizza_datas, ...pizza_datassa];
+let result = [...pizza_data, ...pizza_datas, ...pizza_datassa, ...pizza_datassam];
 function renderCategories(data, containerId) {
     let container = document.getElementById(containerId);
     if (!container) return;
@@ -95,6 +105,10 @@ window.changeCount = function(id, action, containerId) {
         pizza_datassa = pizza_datassa.map(item => updateItem(item, id, action));
         renderPizzas(pizza_datassa, "pissaDatassa");
     }
+    else if (containerId === "pissaDatassa") {
+        pizza_datassa = pizza_datassa.map(item => updateItem(item, id, action));
+        renderPizzas(pizza_datassam, "pissaDatassam");
+    }
 };
 
 function updateItem(item, id, action) {
@@ -109,6 +123,7 @@ function updateItem(item, id, action) {
     renderPizzas(pizza_data, "pissaData");
     renderPizzas(pizza_datas, "pissaDatas");
     renderPizzas(pizza_datassa, "pissaDatassa");
+    renderPizzas(pizza_datassam, "pissaDatassam");
 
 document.addEventListener("DOMContentLoaded", () => {
    
@@ -116,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPizzas(pizza_data, "pissaData");
     renderPizzas(pizza_datas, "pissaDatas");
     renderPizzas(pizza_datassa, "pissaDatassa");
+    renderPizzas(pizza_datassam, "pissaDatassam");
 
 
 
@@ -129,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             renderPizzas(filtered, "pissaData");
             renderPizzas(filtered, "pissaDatas");
             renderPizzas(filtered, "pissaDatassa");
+            renderPizzas(filtered, "pissaDatassam");
         });
     }
 });
