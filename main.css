@@ -290,3 +290,107 @@ header{
         line-height: 20px;
         
     }
+
+    .footer{
+        padding: 40px 0;
+
+    }
+    .footer-list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        align-items: stretch;
+        margin-bottom: 20px;
+    }
+    .footer-item{
+        max-width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 15px;
+        
+    }
+    .footer-a1{
+        color:#191919;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .footer-a2{
+        color:#191919;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 48px;
+    }
+    .footer-a{
+        color:#191919;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    .footer-icon{
+        display: flex;
+        align-items: center;
+        gap:8px;
+        color:#191919;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    i{
+        font-size: 22px;
+        color: #FF7010;
+    }
+    .footer-title{
+        color:#191919;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    @media(max-width:1000px){
+        
+    }
+    @media(max-width:960px){
+        .pissa{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+    @media(max-width:1000px){
+
+    }
+    @media(max-width:760px){
+  .pissa{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .menu{
+       
+        grid-template-columns: repeat(2, 1fr);
+     
+    }
+        .sectionOne{
+        margin-top: 120px;
+        }
+         .napitData{
+        flex-wrap: wrap;
+       }
+        .sectionTwo{
+       margin-top: 20px;
+    }
+    .label{
+        width: 200px;
+    }
+     .sectionThree{
+      padding: 20px 0;
+    }
+    }
+    @media(max-width:560px){
+.pissa{
+            grid-template-columns:1fr;
+        }
+    }
